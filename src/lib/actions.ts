@@ -1,0 +1,23 @@
+/** Scroll-reveal: the `reveal` class is only added from JS, so content stays visible without it. */
+export function reveal(node: HTMLElement, delay = 0) {
+	if (typeof IntersectionObserver === 'undefined') return;
+	node.classList.add('reveal');
+	if (delay) node.style.transitionDelay = `${delay}ms`;
+	const io = new IntersectionObserver(
+		(entries) => {
+			for (const entry of entries) {
+				if (entry.isIntersecting) {
+					node.classList.add('in');
+					io.disconnect();
+				}
+			}
+		},
+		{ threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+	);
+	io.observe(node);
+	return {
+		destroy() {
+			io.disconnect();
+		}
+	};
+}

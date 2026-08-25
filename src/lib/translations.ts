@@ -60,25 +60,67 @@ const en = {
 	},
 	work: {
 		kicker: 'Selected work',
-		title: 'Products we are proud of.',
-		sub: 'A few of the projects we have shipped recently.',
-		items: [
-			{
-				title: 'Fintech Analytics Platform',
-				desc: 'Real-time analytics, reporting, and risk monitoring — brought together in one calm, organized workspace.',
-				tags: ['Web', 'Dashboard']
+		title: 'Ten products, live in production.',
+		sub: 'Web platforms, mobile apps and AI tools we designed, built and shipped end to end. Every screenshot below is the real site — go see it.',
+		filters: {
+			all: 'All work',
+			mobile: 'Mobile apps',
+			platform: 'Platforms & AI',
+			travel: 'Destinations'
+		},
+		visit: 'Visit site',
+		items: {
+			'visit-svaneti': {
+				title: 'Visit Svaneti',
+				desc: 'A destination platform for Upper Svaneti that leads with the road and pass status, then the towers, the treks, the calendar and where to sleep.',
+				tags: ['Travel platform', 'Multilingual', 'Maps']
 			},
-			{
-				title: 'Retail Commerce App',
-				desc: 'A mobile shopping experience with personalized recommendations and a checkout flow customers actually finish.',
-				tags: ['iOS', 'Android']
+			stafika: {
+				title: 'Stafika',
+				desc: 'An iOS and Android marketplace that matches events with vetted staff — waiters, bartenders, DJs — across 27 categories.',
+				tags: ['iOS', 'Android', 'Marketplace']
 			},
-			{
-				title: 'AI Support Assistant',
-				desc: 'Answers 70% of customer questions on its own and hands the hard cases to a human — with full context attached.',
-				tags: ['AI', 'Integration']
+			menuhub: {
+				title: 'MenuHub',
+				desc: 'A QR menu and table-ordering system for restaurants: the menu updates live, and going from sign-up to serving takes under ten minutes.',
+				tags: ['SaaS', 'Restaurants', 'QR ordering']
+			},
+			kadri: {
+				title: 'KadriHub',
+				desc: 'First-round interviews on autopilot: the AI reads the CV, asks its own questions, and hands the recruiter a scored report they can compare.',
+				tags: ['AI', 'Recruiting', 'Analytics']
+			},
+			mendex: {
+				title: 'Mendex',
+				desc: 'A driver app that shows real net earnings — what came in, what was deducted, what is left — alongside park bonuses and referral rewards.',
+				tags: ['iOS', 'Android', 'Fintech']
+			},
+			'visit-kakheti': {
+				title: 'Visit Kakheti',
+				desc: 'Eight municipalities in one catalogue: wine cellars, guesthouses and monasteries with opening hours, prices and a route builder.',
+				tags: ['Travel platform', 'Catalogue', 'Trilingual']
+			},
+			avanto: {
+				title: 'Avanto',
+				desc: 'Index drivers cash out straight to their own IBAN — in seconds, for a flat 0.5 ₾ fee, with no waiting for payday.',
+				tags: ['Fintech', 'Mobile', 'Payouts']
+			},
+			keda: {
+				title: 'Visit Keda',
+				desc: 'Sixty-four settlements of Upper Adjara on one map — live conditions, guesthouses, waterfalls and a portal for local businesses.',
+				tags: ['Travel platform', 'Cloudflare', 'Search']
+			},
+			ostati: {
+				title: 'ostati.ai',
+				desc: 'AI training for hotel, restaurant and café teams: personalised courses, live role-play simulations and instant feedback in one dashboard.',
+				tags: ['AI', 'Training', 'HORECA']
+			},
+			'visit-samegrelo': {
+				title: 'Visit Samegrelo',
+				desc: 'Palaces, canyons and Colchis wetlands — 24 places in one catalogue, with timed tickets and step-free access marked on every listing.',
+				tags: ['Travel platform', 'Ticketing', 'Accessibility']
 			}
-		]
+		}
 	},
 	founder: {
 		kicker: 'The person behind it',
@@ -219,25 +261,67 @@ const ka: Dictionary = {
 	},
 	work: {
 		kicker: 'ნამუშევრები',
-		title: 'პროექტები, რომლებითაც ვამაყობთ.',
-		sub: 'რამდენიმე პროდუქტი, რომლებიც ბოლო პერიოდში მივაწოდეთ.',
-		items: [
-			{
-				title: 'ფინტექ ანალიტიკის პლატფორმა',
-				desc: 'ანალიტიკა, ანგარიშგება და რისკების მონიტორინგი რეალურ დროში — ერთ მოწესრიგებულ სამუშაო სივრცეში.',
-				tags: ['Web', 'Dashboard']
+		title: 'ათი პროდუქტი, უკვე ონლაინ.',
+		sub: 'ვებპლატფორმები, მობილური აპები და AI-ინსტრუმენტები — თითოეული ჩვენ დავგეგმეთ, ავაწყვეთ და გავუშვით. ქვემოთ ნამდვილი საიტებია, შედით და ნახეთ.',
+		filters: {
+			all: 'ყველა',
+			mobile: 'მობილური აპები',
+			platform: 'პლატფორმები და AI',
+			travel: 'ტურიზმი'
+		},
+		visit: 'საიტის ნახვა',
+		items: {
+			'visit-svaneti': {
+				title: 'Visit Svaneti',
+				desc: 'ზემო სვანეთის ტურისტული პლატფორმა: ჯერ გზისა და უღელტეხილების მდგომარეობა, მერე კოშკები, ლაშქრობები, კალენდარი და სად დარჩე.',
+				tags: ['ტურიზმი', 'მრავალენოვანი', 'რუკები']
 			},
-			{
-				title: 'საცალო ვაჭრობის აპლიკაცია',
-				desc: 'მობილური შოპინგი პერსონალიზებული რეკომენდაციებით და გადახდის პროცესით, რომელსაც მომხმარებლები ბოლომდე მიჰყვებიან.',
-				tags: ['iOS', 'Android']
+			stafika: {
+				title: 'Stafika',
+				desc: 'iOS-ისა და Android-ის აპი წვეულებას სანდო პერსონალს უკავშირებს — ოფიციანტები, ბარმენები, DJ-ები, სულ 27 კატეგორია.',
+				tags: ['iOS', 'Android', 'მარკეტფლეისი']
 			},
-			{
-				title: 'AI ასისტენტი მხარდაჭერისთვის',
-				desc: 'მომხმარებელთა კითხვების 70%-ს დამოუკიდებლად პასუხობს, რთულ შემთხვევებს კი სრული კონტექსტით გადასცემს ოპერატორს.',
-				tags: ['AI', 'Integration']
+			menuhub: {
+				title: 'MenuHub',
+				desc: 'QR-მენიუ და მაგიდიდან შეკვეთა რესტორნებისთვის: მენიუ რეალურ დროში იცვლება, გაშვება კი ათ წუთზე ნაკლებს იღებს.',
+				tags: ['SaaS', 'რესტორნები', 'QR-შეკვეთა']
+			},
+			kadri: {
+				title: 'KadriHub',
+				desc: 'პირველი ეტაპის გასაუბრება ავტომატურად: AI კითხულობს CV-ს, თავად სვამს კითხვებს და რეკრუტერს შედარებად რეპორტს აბრუნებს.',
+				tags: ['AI', 'დაქირავება', 'ანალიტიკა']
+			},
+			mendex: {
+				title: 'Mendex',
+				desc: 'მძღოლის აპი ნამდვილ შემოსავალს აჩვენებს — რა შემოვიდა, რა ჩამოიჭრა, რა დარჩა — და იქვე პარკის ბონუსებსა და მოწვევებს.',
+				tags: ['iOS', 'Android', 'ფინტექი']
+			},
+			'visit-kakheti': {
+				title: 'Visit Kakheti',
+				desc: 'რვა მუნიციპალიტეტი ერთ კატალოგში: მარნები, სასტუმროები და მონასტრები სამუშაო საათებით, ფასებით და მარშრუტის დამგეგმავით.',
+				tags: ['ტურიზმი', 'კატალოგი', 'სამენოვანი']
+			},
+			avanto: {
+				title: 'Avanto',
+				desc: 'ინდექსის მძღოლები გამომუშავებულ თანხას პირდაპირ თავიანთ IBAN-ზე იტანენ — წამებში, 0.5 ₾ ფიქსირებული საკომისიოთი და გადახდის დღის ლოდინის გარეშე.',
+				tags: ['ფინტექი', 'მობილური', 'გადახდები']
+			},
+			keda: {
+				title: 'Visit Keda',
+				desc: 'ზემო აჭარის სამოცდაოთხი დასახლება ერთ რუკაზე — ამინდი, სასტუმროები, ჩანჩქერები და პორტალი ადგილობრივი ბიზნესისთვის.',
+				tags: ['ტურიზმი', 'Cloudflare', 'ძებნა']
+			},
+			ostati: {
+				title: 'ostati.ai',
+				desc: 'AI-ტრენინგი სასტუმროს, რესტორნისა და კაფის გუნდებისთვის: პერსონალიზებული კურსები, ცოცხალი სიმულაციები და მყისიერი უკუკავშირი ერთ პლატფორმაზე.',
+				tags: ['AI', 'ტრენინგი', 'HORECA']
+			},
+			'visit-samegrelo': {
+				title: 'Visit Samegrelo',
+				desc: 'სასახლეები, კანიონები და კოლხეთის ჭაობები — 24 ადგილი ერთ კატალოგში, დროზე მიბმული ბილეთებით და ადაპტირებულობის ნიშნულით.',
+				tags: ['ტურიზმი', 'ბილეთები', 'ხელმისაწვდომობა']
 			}
-		]
+		}
 	},
 	founder: {
 		kicker: 'ვინ დგას კომპანიის უკან',
@@ -376,25 +460,67 @@ const ru: Dictionary = {
 	},
 	work: {
 		kicker: 'Избранные проекты',
-		title: 'Продукты, которыми мы гордимся.',
-		sub: 'Несколько проектов, которые мы выпустили за последнее время.',
-		items: [
-			{
-				title: 'Финтех-платформа аналитики',
-				desc: 'Аналитика, отчётность и мониторинг рисков в реальном времени — в одном спокойном, организованном рабочем пространстве.',
-				tags: ['Web', 'Dashboard']
+		title: 'Десять продуктов — все уже в работе.',
+		sub: 'Веб-платформы, мобильные приложения и AI-инструменты: каждый мы спроектировали, собрали и выпустили сами. Ниже — снимки настоящих сайтов, зайдите и посмотрите.',
+		filters: {
+			all: 'Все',
+			mobile: 'Мобильные приложения',
+			platform: 'Платформы и AI',
+			travel: 'Туризм'
+		},
+		visit: 'Открыть сайт',
+		items: {
+			'visit-svaneti': {
+				title: 'Visit Svaneti',
+				desc: 'Туристическая платформа Верхней Сванетии: сначала состояние дороги и перевалов, потом башни, треки, календарь и где переночевать.',
+				tags: ['Туризм', 'Мультиязычность', 'Карты']
 			},
-			{
-				title: 'Приложение для ритейла',
-				desc: 'Мобильный шопинг с персональными рекомендациями и оформлением заказа, которое покупатели действительно доводят до конца.',
-				tags: ['iOS', 'Android']
+			stafika: {
+				title: 'Stafika',
+				desc: 'Приложение для iOS и Android находит для мероприятия проверенный персонал — официантов, барменов, диджеев, всего 27 категорий.',
+				tags: ['iOS', 'Android', 'Маркетплейс']
 			},
-			{
-				title: 'AI-ассистент поддержки',
-				desc: 'Самостоятельно отвечает на 70% вопросов клиентов, а сложные случаи передаёт оператору — с полным контекстом.',
-				tags: ['AI', 'Integration']
+			menuhub: {
+				title: 'MenuHub',
+				desc: 'QR-меню и заказ со стола для ресторанов: меню меняется в реальном времени, а запуск занимает меньше десяти минут.',
+				tags: ['SaaS', 'Рестораны', 'QR-заказ']
+			},
+			kadri: {
+				title: 'KadriHub',
+				desc: 'Первый этап собеседования на автомате: AI читает резюме, сам задаёт вопросы и возвращает рекрутеру отчёт, который можно сравнивать.',
+				tags: ['AI', 'Найм', 'Аналитика']
+			},
+			mendex: {
+				title: 'Mendex',
+				desc: 'Приложение водителя показывает реальный доход — что пришло, что удержали, что осталось — и рядом бонусы парка и рефералов.',
+				tags: ['iOS', 'Android', 'Финтех']
+			},
+			'visit-kakheti': {
+				title: 'Visit Kakheti',
+				desc: 'Восемь муниципалитетов в одном каталоге: марани, гостевые дома и монастыри с часами работы, ценами и построением маршрута.',
+				tags: ['Туризм', 'Каталог', 'Три языка']
+			},
+			avanto: {
+				title: 'Avanto',
+				desc: 'Водители индекса выводят заработок прямо на свой IBAN — за секунды, с фиксированной комиссией 0,5 ₾ и без ожидания дня выплаты.',
+				tags: ['Финтех', 'Мобильное', 'Выплаты']
+			},
+			keda: {
+				title: 'Visit Keda',
+				desc: 'Шестьдесят четыре села Верхней Аджарии на одной карте — погода, гостевые дома, водопады и портал для местного бизнеса.',
+				tags: ['Туризм', 'Cloudflare', 'Поиск']
+			},
+			ostati: {
+				title: 'ostati.ai',
+				desc: 'AI-тренинг для команд отелей, ресторанов и кафе: персональные курсы, живые симуляции и мгновенная обратная связь в одной панели.',
+				tags: ['AI', 'Обучение', 'HORECA']
+			},
+			'visit-samegrelo': {
+				title: 'Visit Samegrelo',
+				desc: 'Дворцы, каньоны и колхидские болота — 24 места в одном каталоге, с билетами по времени и отметкой о доступной среде.',
+				tags: ['Туризм', 'Билеты', 'Доступность']
 			}
-		]
+		}
 	},
 	founder: {
 		kicker: 'Кто за этим стоит',

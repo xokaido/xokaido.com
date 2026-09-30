@@ -60,13 +60,14 @@ const en = {
 	},
 	work: {
 		kicker: 'Selected work',
-		title: 'Ten products, live in production.',
+		title: 'Thirteen products, live in production.',
 		sub: 'Web platforms, mobile apps and AI tools we designed, built and shipped end to end. Every screenshot below is the real site — go see it.',
 		filters: {
 			all: 'All work',
 			mobile: 'Mobile apps',
 			platform: 'Platforms & AI',
-			travel: 'Destinations'
+			travel: 'Destinations',
+			faith: 'Faith & scripture'
 		},
 		visit: 'Visit site',
 		items: {
@@ -119,6 +120,21 @@ const en = {
 				title: 'Visit Samegrelo',
 				desc: 'Palaces, canyons and Colchis wetlands — 24 places in one catalogue, with timed tickets and step-free access marked on every listing.',
 				tags: ['Travel platform', 'Ticketing', 'Accessibility']
+			},
+			saint: {
+				title: 'saint.ge',
+				desc: 'An Orthodox calendar for every day of the year: the saints commemorated, the readings and the fasting rule, in the Old or the New Calendar and in four languages.',
+				tags: ['Calendar', 'Four languages', 'Search']
+			},
+			iveria: {
+				title: 'Iveria.me',
+				desc: 'A multilingual Bible reader: Old Georgian, Greek, Latin, Russian, English and Hebrew side by side, with audio, saved passages and commentary from the Church Fathers.',
+				tags: ['Reader', 'Six languages', 'Audio']
+			},
+			gulani: {
+				title: 'Gulani',
+				desc: 'The services of the day, prayers and liturgical books in one place — an installable app that follows the church calendar and keeps saved texts readable offline.',
+				tags: ['PWA', 'Offline', 'Liturgy']
 			}
 		}
 	},
@@ -261,13 +277,14 @@ const ka: Dictionary = {
 	},
 	work: {
 		kicker: 'ნამუშევრები',
-		title: 'ათი პროდუქტი, უკვე ონლაინ.',
+		title: 'ცამეტი პროდუქტი, უკვე ონლაინ.',
 		sub: 'ვებპლატფორმები, მობილური აპები და AI-ინსტრუმენტები — თითოეული ჩვენ დავგეგმეთ, ავაწყვეთ და გავუშვით. ქვემოთ ნამდვილი საიტებია, შედით და ნახეთ.',
 		filters: {
 			all: 'ყველა',
 			mobile: 'მობილური აპები',
 			platform: 'პლატფორმები და AI',
-			travel: 'ტურიზმი'
+			travel: 'ტურიზმი',
+			faith: 'სარწმუნოება'
 		},
 		visit: 'საიტის ნახვა',
 		items: {
@@ -320,6 +337,21 @@ const ka: Dictionary = {
 				title: 'Visit Samegrelo',
 				desc: 'სასახლეები, კანიონები და კოლხეთის ჭაობები — 24 ადგილი ერთ კატალოგში, დროზე მიბმული ბილეთებით და ადაპტირებულობის ნიშნულით.',
 				tags: ['ტურიზმი', 'ბილეთები', 'ხელმისაწვდომობა']
+			},
+			saint: {
+				title: 'saint.ge',
+				desc: 'მართლმადიდებლური კალენდარი წლის ყველა დღისთვის: დღის წმინდანები, საკითხავები და მარხვა — ძველი ან ახალი სტილით, ოთხ ენაზე.',
+				tags: ['კალენდარი', 'ოთხი ენა', 'ძებნა']
+			},
+			iveria: {
+				title: 'Iveria.me',
+				desc: 'ბიბლიის მრავალენოვანი მკითხველი: ძველი ქართული, ბერძნული, ლათინური, რუსული, ინგლისური და ებრაული ტექსტები გვერდიგვერდ, აუდიოთი, სანიშნებითა და წმინდა მამათა განმარტებებით.',
+				tags: ['მკითხველი', 'ექვსი ენა', 'აუდიო']
+			},
+			gulani: {
+				title: 'გულანი',
+				desc: 'დღის მსახურებები, ლოცვები და საღვთისმსახურო წიგნები ერთ სივრცეში. აპი ტელეფონზე ყენდება, საეკლესიო კალენდარს მიჰყვება და შენახულ ტექსტებს ინტერნეტის გარეშეც ხსნის.',
+				tags: ['PWA', 'ოფლაინ', 'ღვთისმსახურება']
 			}
 		}
 	},
@@ -460,13 +492,14 @@ const ru: Dictionary = {
 	},
 	work: {
 		kicker: 'Избранные проекты',
-		title: 'Десять продуктов — все уже в работе.',
+		title: 'Тринадцать продуктов — все уже в работе.',
 		sub: 'Веб-платформы, мобильные приложения и AI-инструменты: каждый мы спроектировали, собрали и выпустили сами. Ниже — снимки настоящих сайтов, зайдите и посмотрите.',
 		filters: {
 			all: 'Все',
 			mobile: 'Мобильные приложения',
 			platform: 'Платформы и AI',
-			travel: 'Туризм'
+			travel: 'Туризм',
+			faith: 'Вера и Писание'
 		},
 		visit: 'Открыть сайт',
 		items: {
@@ -519,6 +552,21 @@ const ru: Dictionary = {
 				title: 'Visit Samegrelo',
 				desc: 'Дворцы, каньоны и колхидские болота — 24 места в одном каталоге, с билетами по времени и отметкой о доступной среде.',
 				tags: ['Туризм', 'Билеты', 'Доступность']
+			},
+			saint: {
+				title: 'saint.ge',
+				desc: 'Православный календарь на каждый день года: святые дня, чтения и пост — по старому или новому стилю, на четырёх языках.',
+				tags: ['Календарь', 'Четыре языка', 'Поиск']
+			},
+			iveria: {
+				title: 'Iveria.me',
+				desc: 'Многоязычная Библия: древнегрузинский, греческий, латинский, русский, английский и еврейский тексты рядом, с аудио, закладками и толкованиями святых отцов.',
+				tags: ['Чтение', 'Шесть языков', 'Аудио']
+			},
+			gulani: {
+				title: 'Gulani',
+				desc: 'Службы дня, молитвы и богослужебные книги в одном месте. Приложение ставится на телефон, следует церковному календарю и открывает сохранённые тексты без интернета.',
+				tags: ['PWA', 'Офлайн', 'Богослужение']
 			}
 		}
 	},

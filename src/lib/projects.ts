@@ -3,7 +3,7 @@
  * Copy (title / description / tags) lives in `translations.ts`, keyed by `slug`.
  * Order here is the render order — deliberately mixed so the categories interleave.
  */
-export type ProjectCategory = 'mobile' | 'platform' | 'travel';
+export type ProjectCategory = 'mobile' | 'platform' | 'travel' | 'faith';
 
 export type Project = {
 	slug: string;
@@ -45,6 +45,12 @@ export const projects: Project[] = [
 		category: 'mobile'
 	},
 	{
+		slug: 'iveria',
+		url: 'https://iveria.me',
+		domain: 'iveria.me',
+		category: 'faith'
+	},
+	{
 		slug: 'visit-kakheti',
 		url: 'https://visit-kakheti.ge',
 		domain: 'visit-kakheti.ge',
@@ -55,6 +61,12 @@ export const projects: Project[] = [
 		url: 'https://avanto.ge',
 		domain: 'avanto.ge',
 		category: 'mobile'
+	},
+	{
+		slug: 'saint',
+		url: 'https://saint.ge',
+		domain: 'saint.ge',
+		category: 'faith'
 	},
 	{
 		slug: 'keda',
@@ -73,7 +85,13 @@ export const projects: Project[] = [
 		url: 'https://visit-samegrelo.ge',
 		domain: 'visit-samegrelo.ge',
 		category: 'travel'
+	},
+	{
+		slug: 'gulani',
+		url: 'https://gulani.ge',
+		domain: 'gulani.ge',
+		category: 'faith'
 	}
 ];
 
-export const categories: ProjectCategory[] = ['mobile', 'platform', 'travel'];
+export const categories: ProjectCategory[] = ['mobile', 'platform', 'travel', 'faith'];

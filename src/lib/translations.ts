@@ -2,9 +2,9 @@ export type Locale = 'ka' | 'ru' | 'en';
 
 const en = {
 	meta: {
-		title: 'Xokaido Technologies — Websites, Mobile Apps & AI Integrations',
+		title: 'Xokaido Technologies — websites, mobile apps and AI tools, built in Tbilisi',
 		description:
-			'Xokaido Technologies LLC crafts modern websites, mobile applications, and AI integrations. Founded by Xokaido, a recognized name in the industry.'
+			'Xokaido Technologies is a small senior studio in Tbilisi that designs and builds websites, mobile apps and AI tools. Thirteen products are live in production.'
 	},
 	nav: {
 		services: 'Services',
@@ -14,53 +14,54 @@ const en = {
 		contact: 'Start a project'
 	},
 	hero: {
-		eyebrow: 'Websites · Mobile Apps · AI',
-		title: 'Digital products built with <em>craft</em> — shipped with confidence.',
-		lede: 'Xokaido Technologies designs and engineers modern websites, mobile applications, and AI integrations for companies that care about the details — from first sketch to production.',
+		place: 'Software studio · Tbilisi, Georgia',
+		title: 'Thirteen live products, from Svaneti’s road status to a Bible in six languages',
+		lede: 'Xokaido Technologies is a small senior studio in Tbilisi. We design and build websites, mobile apps and AI tools, and look after them once they are live.',
 		cta1: 'Start a project',
-		cta2: 'See our work',
-		stats: [
-			{ value: '15+ yrs', label: 'engineering experience' },
-			{ value: '60+', label: 'products shipped' },
-			{ value: 'Full-stack', label: 'strategy to launch' },
-			{ value: 'AI-native', label: 'practical, production-grade' }
-		]
+		cta2: 'See the work',
+		facts: [
+			{ value: '20 years', label: 'of engineering' },
+			{ value: '13', label: 'products live in production' },
+			{ value: 'Tbilisi', label: 'where the studio works' }
+		],
+		registerLabel: 'Register of live products',
+		open: 'Open'
 	},
-	stack: { label: 'Technologies we build with' },
+	stack: { label: 'Built with' },
 	services: {
 		kicker: 'What we do',
-		title: 'One studio, every layer of your product.',
+		title: 'One studio, every layer of your product',
 		sub: 'Strategy, design, and engineering under one roof — so nothing gets lost between the idea and the release.',
 		items: [
 			{
-				title: 'Modern Websites',
+				title: 'Websites',
 				desc: 'Fast, accessible, beautifully crafted sites — marketing pages, e-commerce, and full web platforms that perform on every device.'
 			},
 			{
-				title: 'Mobile Applications',
+				title: 'Mobile apps',
 				desc: 'iOS and Android apps with thoughtful UX, smooth performance, and a codebase your team can grow with for years.'
 			},
 			{
-				title: 'AI Integrations',
+				title: 'AI integrations',
 				desc: 'Practical AI woven into your product — assistants, automation, search, and data intelligence built on modern models.'
 			},
 			{
-				title: 'Product Design',
+				title: 'Product design',
 				desc: 'Interfaces people actually enjoy using. Research, prototyping, and design systems that keep your product coherent as it scales.'
 			},
 			{
-				title: 'Cloud & DevOps',
+				title: 'Cloud and DevOps',
 				desc: 'Reliable infrastructure, CI/CD pipelines, and observability — so releases are calm, uptime is high, and costs stay predictable.'
 			},
 			{
-				title: 'Technical Consulting',
+				title: 'Technical consulting',
 				desc: 'Architecture reviews, technology audits, and hands-on guidance when you need a senior perspective before a big decision.'
 			}
 		]
 	},
 	work: {
 		kicker: 'Selected work',
-		title: 'Thirteen products, live in production.',
+		title: 'The full register',
 		sub: 'Web platforms, mobile apps and AI tools we designed, built and shipped end to end. Every screenshot below is the real site — go see it.',
 		filters: {
 			all: 'All work',
@@ -139,18 +140,18 @@ const en = {
 		}
 	},
 	founder: {
-		kicker: 'The person behind it',
-		title: 'Built and led by Xokaido.',
-		p1: 'Xokaido is a well-known name in the industry — an engineer and product builder with over fifteen years of experience shipping software that lasts. He founded Xokaido Technologies on a simple belief: great digital products come from small, senior teams who sweat the details.',
+		kicker: 'Who leads it',
+		title: 'Built and led by Xokaido',
+		p1: 'Xokaido is an engineer and product builder with twenty years of experience shipping software that lasts. He founded Xokaido Technologies on a simple belief: good digital products come from small, senior teams who care about the details.',
 		p2: 'Every engagement gets his direct involvement. No hand-offs to junior teams, no layers of account managers — just experienced people building carefully, communicating clearly, and delivering on time.',
 		quote:
 			'“Technology should feel effortless to the people who use it. Getting there takes rigor, taste, and honest work — that’s what we bring.”',
 		name: 'Xokaido',
-		role: 'Founder & Principal Engineer, Xokaido Technologies LLC'
+		role: 'Founder and principal engineer'
 	},
 	process: {
 		kicker: 'How we work',
-		title: 'A calm, transparent process.',
+		title: 'A calm, transparent process',
 		sub: 'You always know what’s happening, what’s next, and why.',
 		steps: [
 			{
@@ -171,47 +172,21 @@ const en = {
 			}
 		]
 	},
-	testimonials: {
-		kicker: 'What clients say',
-		title: 'Trusted by people who value results.',
-		items: [
-			{
-				quote:
-					'The team delivered our platform ahead of schedule and never compromised on quality. The best technical partner we have worked with.',
-				name: 'Giorgi K.',
-				role: 'CEO, fintech startup',
-				initials: 'GK'
-			},
-			{
-				quote:
-					'A mobile app our customers genuinely love. The process was transparent from day one — we always knew exactly where things stood.',
-				name: 'Nino B.',
-				role: 'Product Director, retail group',
-				initials: 'NB'
-			},
-			{
-				quote:
-					'The AI assistant cut our support load almost in half, and the integration went live without a single hiccup.',
-				name: 'David M.',
-				role: 'Head of Operations',
-				initials: 'DM'
-			}
-		]
-	},
 	cta: {
 		kicker: 'Let’s talk',
 		title: 'Have something worth building?',
-		sub: 'Tell us where you’re headed. We’ll reply within one business day with honest thoughts on how to get there.',
-		button: 'Start the conversation',
-		mailLabel: 'Prefer email?'
+		sub: 'Tell us where you are headed. We reply within one business day with honest thoughts on how to get there.',
+		button: 'Write to us',
+		mailLabel: 'Or email',
+		entry: 'Your product',
+		entryNote: 'the next entry in the register'
 	},
 	footer: {
-		tagline: 'Modern websites, mobile applications, and AI integrations — crafted in Tbilisi.',
+		tagline: 'Websites, mobile apps and AI integrations, made in Tbilisi',
 		linksTitle: 'Navigate',
 		contactTitle: 'Contact',
 		location: 'Tbilisi, Georgia',
-		rights: 'All rights reserved.',
-		made: 'Made in Tbilisi'
+		rights: 'All rights reserved'
 	}
 };
 
@@ -219,9 +194,9 @@ export type Dictionary = typeof en;
 
 const ka: Dictionary = {
 	meta: {
-		title: 'Xokaido Technologies — ვებსაიტები, მობილური აპები და AI ინტეგრაციები',
+		title: 'Xokaido Technologies — ვებსაიტები, მობილური აპები და AI-ინსტრუმენტები თბილისიდან',
 		description:
-			'Xokaido Technologies LLC ქმნის თანამედროვე ვებსაიტებს, მობილურ აპლიკაციებსა და AI ინტეგრაციებს. დამფუძნებელი — Xokaido, ინდუსტრიაში ცნობილი სახელი.'
+			'Xokaido Technologies პატარა, გამოცდილი სტუდიაა თბილისში. ვქმნით ვებსაიტებს, მობილურ აპებსა და AI-ინსტრუმენტებს. ცამეტი პროდუქტი უკვე მუშაობს.'
 	},
 	nav: {
 		services: 'სერვისები',
@@ -231,22 +206,23 @@ const ka: Dictionary = {
 		contact: 'დაიწყეთ პროექტი'
 	},
 	hero: {
-		eyebrow: 'ვებსაიტები · მობილური აპები · AI',
-		title: 'ციფრული პროდუქტები, შექმნილი <em>ოსტატობით</em> — მიწოდებული თავდაჯერებულად.',
-		lede: 'Xokaido Technologies ქმნის თანამედროვე ვებსაიტებს, მობილურ აპლიკაციებსა და AI ინტეგრაციებს კომპანიებისთვის, რომლებისთვისაც დეტალები მნიშვნელოვანია — პირველი ესკიზიდან პროდაქშენამდე.',
+		place: 'პროგრამული სტუდია · თბილისი',
+		title: 'ცამეტი მოქმედი პროდუქტი — სვანეთის გზების მდგომარეობიდან ექვსენოვან ბიბლიამდე',
+		lede: 'Xokaido Technologies პატარა, გამოცდილი სტუდიაა თბილისში. ვქმნით ვებსაიტებს, მობილურ აპებსა და AI-ინსტრუმენტებს და გაშვების შემდეგაც ვუვლით მათ.',
 		cta1: 'დაიწყეთ პროექტი',
-		cta2: 'ნამუშევრების ნახვა',
-		stats: [
-			{ value: '15+ წელი', label: 'საინჟინრო გამოცდილება' },
-			{ value: '60+', label: 'მიწოდებული პროდუქტი' },
-			{ value: 'Full-stack', label: 'სტრატეგიიდან გაშვებამდე' },
-			{ value: 'AI-native', label: 'პრაქტიკული, საწარმოო დონის' }
-		]
+		cta2: 'ნახეთ ნამუშევრები',
+		facts: [
+			{ value: '20 წელი', label: 'საინჟინრო გამოცდილება' },
+			{ value: '13', label: 'მოქმედი პროდუქტი' },
+			{ value: 'თბილისი', label: 'აქ ვმუშაობთ' }
+		],
+		registerLabel: 'მოქმედი პროდუქტების რეესტრი',
+		open: 'გახსნა'
 	},
-	stack: { label: 'ტექნოლოგიები, რომლებთანაც ვმუშაობთ' },
+	stack: { label: 'ტექნოლოგიები' },
 	services: {
 		kicker: 'რას ვაკეთებთ',
-		title: 'ერთი სტუდია — თქვენი პროდუქტის ყველა შრე.',
+		title: 'ერთი სტუდია — თქვენი პროდუქტის ყველა შრე',
 		sub: 'სტრატეგია, დიზაინი და ინჟინერია ერთ ჭერქვეშ, რომ იდეასა და რელიზს შორის არაფერი დაიკარგოს.',
 		items: [
 			{
@@ -277,7 +253,7 @@ const ka: Dictionary = {
 	},
 	work: {
 		kicker: 'ნამუშევრები',
-		title: 'ცამეტი პროდუქტი, უკვე ონლაინ.',
+		title: 'სრული რეესტრი',
 		sub: 'ვებპლატფორმები, მობილური აპები და AI-ინსტრუმენტები — თითოეული ჩვენ დავგეგმეთ, ავაწყვეთ და გავუშვით. ქვემოთ ნამდვილი საიტებია, შედით და ნახეთ.',
 		filters: {
 			all: 'ყველა',
@@ -356,18 +332,18 @@ const ka: Dictionary = {
 		}
 	},
 	founder: {
-		kicker: 'ვინ დგას კომპანიის უკან',
-		title: 'კომპანიას უძღვება Xokaido.',
-		p1: 'Xokaido ინდუსტრიაში კარგად ცნობილი სახელია — ინჟინერი და პროდუქტების შემქმნელი თხუთმეტ წელზე მეტი გამოცდილებით. მან Xokaido Technologies ერთი მარტივი რწმენით დააფუძნა: საუკეთესო ციფრულ პროდუქტებს პატარა, გამოცდილი გუნდები ქმნიან, რომლებიც დეტალებზე ზრუნავენ.',
-		p2: 'ყველა პროექტში ის პირადად არის ჩართული — არანაირი გადაბარება უმცროს გუნდებზე, მხოლოდ გამოცდილი ადამიანები, გამჭვირვალე კომუნიკაცია და დროულად მიწოდებული შედეგი.',
+		kicker: 'ვინ უძღვება',
+		title: 'სტუდიას Xokaido უძღვება',
+		p1: 'Xokaido ინჟინერი და პროდუქტების შემქმნელია ოცწლიანი გამოცდილებით. Xokaido Technologies მან ერთი მარტივი რწმენით დააფუძნა: კარგ ციფრულ პროდუქტს პატარა, გამოცდილი გუნდი ქმნის, რომელიც დეტალებს უფრთხილდება.',
+		p2: 'ყველა პროექტში პირადად არის ჩართული. საქმე უმცროს გუნდებს არ გადაეცემა: მუშაობენ გამოცდილი ადამიანები, კომუნიკაცია გამჭვირვალეა, შედეგი კი დროულად მზადდება.',
 		quote:
-			'„ტექნოლოგია ადამიანებისთვის უშრომელი უნდა იყოს. ამის მიღწევას კი სიზუსტე, გემოვნება და პატიოსანი შრომა სჭირდება."',
+			'„ტექნოლოგია ადამიანს არ უნდა ამძიმებდეს. ამას სიზუსტე, გემოვნება და პატიოსანი შრომა სჭირდება.“',
 		name: 'Xokaido',
-		role: 'დამფუძნებელი და მთავარი ინჟინერი, Xokaido Technologies LLC'
+		role: 'დამფუძნებელი და მთავარი ინჟინერი'
 	},
 	process: {
 		kicker: 'როგორ ვმუშაობთ',
-		title: 'მშვიდი, გამჭვირვალე პროცესი.',
+		title: 'მშვიდი, გამჭვირვალე პროცესი',
 		sub: 'ყოველთვის იცით, რა ხდება, რა იქნება შემდეგ და რატომ.',
 		steps: [
 			{
@@ -388,55 +364,29 @@ const ka: Dictionary = {
 			}
 		]
 	},
-	testimonials: {
-		kicker: 'რას ამბობენ კლიენტები',
-		title: 'გვენდობიან ისინი, ვინც შედეგს აფასებს.',
-		items: [
-			{
-				quote:
-					'გუნდმა ჩვენი პლატფორმა ვადაზე ადრე მოგვაწოდა და ხარისხზე კომპრომისი არასდროს გაუკეთებია. საუკეთესო ტექნიკური პარტნიორი, ვისთანაც გვიმუშავია.',
-				name: 'გიორგი კ.',
-				role: 'CEO, ფინტექ სტარტაპი',
-				initials: 'გკ'
-			},
-			{
-				quote:
-					'მობილური აპი, რომელიც მომხმარებლებმა ნამდვილად შეიყვარეს. პროცესი პირველივე დღიდან გამჭვირვალე იყო — ყოველთვის ზუსტად ვიცოდით, სად ვიყავით.',
-				name: 'ნინო ბ.',
-				role: 'პროდუქტის დირექტორი, საცალო ჯგუფი',
-				initials: 'ნბ'
-			},
-			{
-				quote:
-					'AI ასისტენტმა მხარდაჭერის დატვირთვა თითქმის განახევრა, ინტეგრაცია კი შეფერხების გარეშე გაეშვა.',
-				name: 'დავით მ.',
-				role: 'ოპერაციების ხელმძღვანელი',
-				initials: 'დმ'
-			}
-		]
-	},
 	cta: {
-		kicker: 'დავიწყოთ',
-		title: 'გაქვთ იდეა, რომელიც აშენებას იმსახურებს?',
-		sub: 'მოგვიყევით, საით მიდიხართ — ერთ სამუშაო დღეში გიპასუხებთ გულწრფელი მოსაზრებებით, როგორ მიაღწიოთ მიზანს.',
-		button: 'დაიწყეთ საუბარი',
-		mailLabel: 'გირჩევნიათ ელფოსტა?'
+		kicker: 'დავილაპარაკოთ',
+		title: 'გაქვთ იდეა, რომლის აშენებაც ღირს?',
+		sub: 'გვითხარით, საით მიდიხართ. ერთ სამუშაო დღეში გიპასუხებთ და გულწრფელად გეტყვით, როგორ ჯობია იქამდე მისვლა.',
+		button: 'მოგვწერეთ',
+		mailLabel: 'ან ელფოსტით',
+		entry: 'თქვენი პროდუქტი',
+		entryNote: 'რეესტრის შემდეგი ჩანაწერი'
 	},
 	footer: {
-		tagline: 'თანამედროვე ვებსაიტები, მობილური აპლიკაციები და AI ინტეგრაციები — შექმნილი ოსტატობით, თბილისში.',
+		tagline: 'ვებსაიტები, მობილური აპები და AI-ინტეგრაციები — თბილისიდან',
 		linksTitle: 'ნავიგაცია',
 		contactTitle: 'კონტაქტი',
 		location: 'თბილისი, საქართველო',
-		rights: 'ყველა უფლება დაცულია.',
-		made: 'დამზადებულია თბილისში'
+		rights: 'ყველა უფლება დაცულია'
 	}
 };
 
 const ru: Dictionary = {
 	meta: {
-		title: 'Xokaido Technologies — сайты, мобильные приложения и AI-интеграции',
+		title: 'Xokaido Technologies — сайты, мобильные приложения и AI-инструменты из Тбилиси',
 		description:
-			'Xokaido Technologies LLC создаёт современные сайты, мобильные приложения и AI-интеграции. Основатель — Xokaido, известное имя в индустрии.'
+			'Xokaido Technologies — небольшая опытная студия в Тбилиси. Проектируем и разрабатываем сайты, мобильные приложения и AI-инструменты. Тринадцать продуктов уже работают.'
 	},
 	nav: {
 		services: 'Услуги',
@@ -446,22 +396,23 @@ const ru: Dictionary = {
 		contact: 'Начать проект'
 	},
 	hero: {
-		eyebrow: 'Сайты · Мобильные приложения · AI',
-		title: 'Цифровые продукты, созданные <em>с мастерством</em> — и запущенные с уверенностью.',
-		lede: 'Xokaido Technologies проектирует и разрабатывает современные сайты, мобильные приложения и AI-интеграции для компаний, которым важны детали — от первого эскиза до продакшена.',
+		place: 'Студия разработки · Тбилиси',
+		title: 'Тринадцать работающих продуктов — от состояния дорог в Сванетии до Библии на шести языках',
+		lede: 'Xokaido Technologies — небольшая опытная студия в Тбилиси. Мы проектируем и разрабатываем сайты, мобильные приложения и AI-инструменты и сопровождаем их после запуска.',
 		cta1: 'Начать проект',
-		cta2: 'Наши проекты',
-		stats: [
-			{ value: '15+ лет', label: 'инженерного опыта' },
-			{ value: '60+', label: 'выпущенных продуктов' },
-			{ value: 'Full-stack', label: 'от стратегии до запуска' },
-			{ value: 'AI-native', label: 'практично, production-уровень' }
-		]
+		cta2: 'Посмотреть работы',
+		facts: [
+			{ value: '20 лет', label: 'инженерного опыта' },
+			{ value: '13', label: 'продуктов в работе' },
+			{ value: 'Тбилиси', label: 'здесь мы работаем' }
+		],
+		registerLabel: 'Реестр работающих продуктов',
+		open: 'Открыть'
 	},
-	stack: { label: 'Технологии, с которыми мы работаем' },
+	stack: { label: 'Технологии' },
 	services: {
 		kicker: 'Что мы делаем',
-		title: 'Одна студия — каждый слой вашего продукта.',
+		title: 'Одна студия — каждый слой вашего продукта',
 		sub: 'Стратегия, дизайн и разработка под одной крышей — чтобы между идеей и релизом ничего не потерялось.',
 		items: [
 			{
@@ -492,7 +443,7 @@ const ru: Dictionary = {
 	},
 	work: {
 		kicker: 'Избранные проекты',
-		title: 'Тринадцать продуктов — все уже в работе.',
+		title: 'Полный реестр',
 		sub: 'Веб-платформы, мобильные приложения и AI-инструменты: каждый мы спроектировали, собрали и выпустили сами. Ниже — снимки настоящих сайтов, зайдите и посмотрите.',
 		filters: {
 			all: 'Все',
@@ -571,18 +522,18 @@ const ru: Dictionary = {
 		}
 	},
 	founder: {
-		kicker: 'Кто за этим стоит',
-		title: 'Компанию ведёт Xokaido.',
-		p1: 'Xokaido — известное имя в индустрии: инженер и создатель продуктов с более чем пятнадцатилетним опытом. Он основал Xokaido Technologies с простым убеждением: лучшие цифровые продукты создают небольшие опытные команды, которым не всё равно на детали.',
+		kicker: 'Кто ведёт студию',
+		title: 'Студию ведёт Xokaido',
+		p1: 'Xokaido — инженер и создатель продуктов с двадцатилетним опытом. Он основал Xokaido Technologies с простым убеждением: хорошие цифровые продукты делают небольшие опытные команды, которым важны детали.',
 		p2: 'Он лично участвует в каждом проекте. Никаких передач младшим командам и лишних менеджеров — только опытные люди, аккуратная работа, прозрачная коммуникация и результат в срок.',
 		quote:
 			'«Технологии должны быть лёгкими для тех, кто ими пользуется. А для этого нужны точность, вкус и честная работа — именно это мы и делаем».',
 		name: 'Xokaido',
-		role: 'Основатель и главный инженер, Xokaido Technologies LLC'
+		role: 'Основатель и главный инженер'
 	},
 	process: {
 		kicker: 'Как мы работаем',
-		title: 'Спокойный и прозрачный процесс.',
+		title: 'Спокойный и прозрачный процесс',
 		sub: 'Вы всегда знаете, что происходит, что будет дальше и почему.',
 		steps: [
 			{
@@ -603,47 +554,21 @@ const ru: Dictionary = {
 			}
 		]
 	},
-	testimonials: {
-		kicker: 'Что говорят клиенты',
-		title: 'Нам доверяют те, кто ценит результат.',
-		items: [
-			{
-				quote:
-					'Команда выпустила нашу платформу раньше срока и ни разу не пошла на компромисс в качестве. Лучший технический партнёр, с которым мы работали.',
-				name: 'Георгий К.',
-				role: 'CEO, финтех-стартап',
-				initials: 'ГК'
-			},
-			{
-				quote:
-					'Мобильное приложение, которое наши клиенты по-настоящему полюбили. Процесс был прозрачным с первого дня — мы всегда точно знали, на каком мы этапе.',
-				name: 'Нино Б.',
-				role: 'Директор по продукту, ритейл-группа',
-				initials: 'НБ'
-			},
-			{
-				quote:
-					'AI-ассистент сократил нагрузку на поддержку почти вдвое, а интеграция прошла без единого сбоя.',
-				name: 'Давид М.',
-				role: 'Руководитель операций',
-				initials: 'ДМ'
-			}
-		]
-	},
 	cta: {
-		kicker: 'Давайте обсудим',
+		kicker: 'Давайте поговорим',
 		title: 'Есть идея, которую стоит построить?',
-		sub: 'Расскажите, куда вы движетесь — в течение одного рабочего дня мы ответим честными мыслями о том, как туда добраться.',
-		button: 'Начать разговор',
-		mailLabel: 'Удобнее по почте?'
+		sub: 'Расскажите, куда вы идёте. Ответим в течение одного рабочего дня и честно скажем, как туда добраться.',
+		button: 'Написать нам',
+		mailLabel: 'Или на почту',
+		entry: 'Ваш продукт',
+		entryNote: 'следующая запись в реестре'
 	},
 	footer: {
-		tagline: 'Современные сайты, мобильные приложения и AI-интеграции — сделано с мастерством в Тбилиси.',
+		tagline: 'Сайты, мобильные приложения и AI-интеграции — из Тбилиси',
 		linksTitle: 'Навигация',
 		contactTitle: 'Контакты',
 		location: 'Тбилиси, Грузия',
-		rights: 'Все права защищены.',
-		made: 'Сделано в Тбилиси'
+		rights: 'Все права защищены'
 	}
 };
 

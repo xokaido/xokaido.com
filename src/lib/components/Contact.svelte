@@ -1,100 +1,127 @@
 <script lang="ts">
 	import { i18n } from '$lib/i18n.svelte';
-	import { reveal } from '$lib/actions';
+	import { projects } from '$lib/projects';
 
 	const t = $derived(i18n.t.cta);
+	const next = String(projects.length + 1).padStart(2, '0');
 </script>
 
-<section id="contact" class="cta">
-	<div class="wrap inner" use:reveal>
-		<p class="eyebrow">{t.kicker}</p>
-		<h2>{t.title}</h2>
-		<p class="sub">{t.sub}</p>
-		<div class="actions">
-			<a class="btn btn-primary" href="mailto:hello@xokaido.com?subject=Project%20inquiry">
-				{t.button}
-				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-					<path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-				</svg>
-			</a>
+<section id="contact">
+	<div class="wrap grid">
+		<div>
+			<p class="label">{t.kicker}</p>
+			<h2>{t.title}</h2>
+			<p class="sub">{t.sub}</p>
+			<div class="actions">
+				<a class="btn btn-primary" href="mailto:hello@xokaido.com?subject=Project%20inquiry">{t.button}</a>
+				<span class="mail">{t.mailLabel} <a href="mailto:hello@xokaido.com">hello@xokaido.com</a></span>
+			</div>
 		</div>
-		<p class="mail">
-			{t.mailLabel} <a href="mailto:hello@xokaido.com">hello@xokaido.com</a>
-		</p>
+
+		<!-- The register's next line, left open -->
+		<a class="blank" href="mailto:hello@xokaido.com?subject=Project%20inquiry">
+			<span class="no">№ {next}</span>
+			<span class="name">{t.entry}</span>
+			<span class="rule" aria-hidden="true"></span>
+			<span class="note">{t.entryNote}</span>
+		</a>
 	</div>
 </section>
 
 <style>
-	.cta {
-		background: var(--dark);
-		color: var(--dark-text);
-		position: relative;
-		overflow: hidden;
+	section {
+		border-top: 1px solid var(--line);
 	}
 
-	.cta::before {
-		content: '';
-		position: absolute;
-		inset: 0;
-		background: radial-gradient(760px 420px at 50% 130%, rgba(217, 142, 79, 0.18), transparent 65%);
-		pointer-events: none;
-	}
-
-	.inner {
-		position: relative;
-		text-align: center;
-		max-width: 44rem;
-	}
-
-	.eyebrow {
-		display: inline-flex;
+	.grid {
+		display: grid;
+		grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+		gap: 40px clamp(40px, 7vw, 112px);
 		align-items: center;
-		gap: 0.6rem;
-		font-size: 0.8rem;
-		font-weight: 600;
-		letter-spacing: 0.16em;
-		text-transform: uppercase;
-		color: var(--copper-bright);
-		margin-bottom: 1.4rem;
-	}
-
-	.eyebrow::before,
-	.eyebrow::after {
-		content: '';
-		width: 26px;
-		height: 1px;
-		background: var(--copper-bright);
 	}
 
 	h2 {
-		font-size: clamp(2.1rem, 4.4vw, 3.2rem);
+		font-size: clamp(32px, 4.4vw, 56px);
+		line-height: 1.08;
+		letter-spacing: -0.025em;
+	}
+
+	:global(:lang(ka)) h2 {
+		font-size: clamp(28px, 3.6vw, 44px);
+		line-height: 1.2;
 	}
 
 	.sub {
-		margin-top: 1.25rem;
-		color: var(--dark-mute);
-		font-size: 1.08rem;
+		margin-top: 20px;
+		color: var(--ink-soft);
+		font-size: 18px;
+		line-height: 28px;
+		max-width: 520px;
 	}
 
 	.actions {
-		margin-top: 2.4rem;
+		margin-top: 32px;
 		display: flex;
-		justify-content: center;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 16px 24px;
 	}
 
 	.mail {
-		margin-top: 1.75rem;
-		font-size: 0.95rem;
-		color: var(--dark-mute);
+		font-size: 15px;
+		color: var(--ink-mute);
 	}
 
 	.mail a {
-		color: var(--copper-bright);
-		text-decoration: none;
-		font-weight: 500;
+		color: var(--ink);
+		text-decoration-color: var(--line-strong);
+		text-underline-offset: 4px;
+		transition: text-decoration-color 0.15s var(--ease);
 	}
 
 	.mail a:hover {
-		text-decoration: underline;
+		text-decoration-color: var(--accent);
+	}
+
+	.blank {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
+		gap: 4px 16px;
+		align-items: baseline;
+		padding: 24px;
+		border: 1px dashed var(--line-strong);
+		border-radius: var(--r-card);
+		text-decoration: none;
+		transition: border-color 0.15s var(--ease);
+	}
+
+	.blank:hover {
+		border-color: var(--accent);
+	}
+
+	.blank .name {
+		font-family: var(--font-display);
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	.blank .rule {
+		grid-column: 2;
+		height: 1px;
+		background: var(--line-strong);
+		margin-block: 12px 8px;
+	}
+
+	.blank .note {
+		grid-column: 2;
+		font-size: 13px;
+		line-height: 20px;
+		color: var(--ink-mute);
+	}
+
+	@media (max-width: 960px) {
+		.grid {
+			grid-template-columns: minmax(0, 1fr);
+		}
 	}
 </style>

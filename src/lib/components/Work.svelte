@@ -1,50 +1,36 @@
 <script lang="ts">
 	import { i18n } from '$lib/i18n.svelte';
-	import { reveal } from '$lib/actions';
 	import { projects, categories, type ProjectCategory } from '$lib/projects';
 
 	const t = $derived(i18n.t.work);
 
 	let filter = $state<ProjectCategory | 'all'>('all');
 
-	const shown = $derived(
-		filter === 'all' ? projects : projects.filter((p) => p.category === filter)
-	);
+	/** Entry numbers are fixed by the register order, so they survive filtering. */
+	const entries = projects.map((p, idx) => ({ ...p, no: String(idx + 1).padStart(2, '0') }));
 
-	const counts = $derived(
-		Object.fromEntries(
-			categories.map((c) => [c, projects.filter((p) => p.category === c).length])
-		) as Record<ProjectCategory, number>
-	);
+	const shown = $derived(filter === 'all' ? entries : entries.filter((p) => p.category === filter));
+
+	const counts = Object.fromEntries(
+		categories.map((c) => [c, projects.filter((p) => p.category === c).length])
+	) as Record<ProjectCategory, number>;
 </script>
 
 <section id="work" class="work">
 	<div class="wrap">
-		<div class="section-head" use:reveal>
-			<p class="kicker">{t.kicker}</p>
+		<div class="section-head">
+			<p class="label">{t.kicker}</p>
 			<h2>{t.title}</h2>
 			<p>{t.sub}</p>
 		</div>
 
-		<div class="filters" use:reveal={80}>
-			<button
-				type="button"
-				class="chip"
-				class:on={filter === 'all'}
-				aria-pressed={filter === 'all'}
-				onclick={() => (filter = 'all')}
-			>
+		<div class="filters" role="group" aria-label={t.kicker}>
+			<button type="button" class:on={filter === 'all'} aria-pressed={filter === 'all'} onclick={() => (filter = 'all')}>
 				{t.filters.all}
 				<span class="count">{projects.length}</span>
 			</button>
 			{#each categories as cat (cat)}
-				<button
-					type="button"
-					class="chip"
-					class:on={filter === cat}
-					aria-pressed={filter === cat}
-					onclick={() => (filter = cat)}
-				>
+				<button type="button" class:on={filter === cat} aria-pressed={filter === cat} onclick={() => (filter = cat)}>
 					{t.filters[cat]}
 					<span class="count">{counts[cat]}</span>
 				</button>
@@ -54,22 +40,12 @@
 		<div class="grid">
 			{#each shown as p, idx (p.slug)}
 				{@const item = t.items[p.slug as keyof typeof t.items]}
-				<a
-					class="card"
-					href={p.url}
-					target="_blank"
-					rel="noopener noreferrer"
-					use:reveal={Math.min(idx, 5) * 70}
-				>
+				<a class="entry" class:lead={idx === 0} href={p.url} target="_blank" rel="noopener noreferrer">
 					<div class="shot">
-						<div class="chrome" aria-hidden="true">
-							<span class="dot"></span><span class="dot"></span><span class="dot"></span>
-							<span class="addr">{p.domain}</span>
-						</div>
 						<img
 							src="/images/portfolio/{p.slug}.webp"
 							srcset="/images/portfolio/{p.slug}@760.webp 760w, /images/portfolio/{p.slug}.webp 1440w"
-							sizes="(max-width: 760px) 92vw, 590px"
+							sizes={idx === 0 ? '(max-width: 960px) 92vw, 700px' : '(max-width: 640px) 92vw, (max-width: 960px) 46vw, 380px'}
 							alt="{item.title} — {p.domain}"
 							loading="lazy"
 							decoding="async"
@@ -79,25 +55,16 @@
 					</div>
 
 					<div class="body">
-						<div class="tags">
-							{#each item.tags as tag (tag)}
-								<span>{tag}</span>
-							{/each}
+						<div class="meta">
+							<span class="no">№ {p.no}</span>
+							<span class="domain">{p.domain}</span>
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label={t.visit}>
+								<path d="M7 17 17 7M9 7h8v8" />
+							</svg>
 						</div>
 						<h3>{item.title}</h3>
 						<p>{item.desc}</p>
-						<span class="visit">
-							{t.visit}
-							<svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-								<path
-									d="M7 17 17 7M9 7h8v8"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-						</span>
+						<p class="tags">{item.tags.join(' · ')}</p>
 					</div>
 				</a>
 			{/each}
@@ -107,127 +74,85 @@
 
 <style>
 	.work {
-		background: var(--bg-alt);
-		transition: background-color 0.35s var(--ease);
+		border-top: 1px solid var(--line);
 	}
 
-	/* ---------- Filters ---------- */
+	/* ---------- Filters: text tabs, counts as quiet mono ---------- */
 	.filters {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.6rem;
-		margin-bottom: 2.2rem;
+		gap: 4px;
+		margin-bottom: 32px;
 	}
 
-	.chip {
+	.filters button {
 		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		background: var(--bg-raise);
-		border: 1px solid var(--line);
-		border-radius: 999px;
-		padding: 0.5rem 1.05rem;
-		font-size: 0.9rem;
-		font-weight: 600;
+		align-items: baseline;
+		gap: 8px;
+		height: 36px;
+		padding-inline: 12px;
+		border: none;
+		border-radius: var(--r-control);
+		background: none;
+		font-size: 15px;
+		line-height: 36px;
+		color: var(--ink-soft);
 		cursor: pointer;
 		transition:
-			border-color 0.25s var(--ease),
-			background 0.25s var(--ease),
-			color 0.25s var(--ease);
+			background-color 0.15s var(--ease),
+			color 0.15s var(--ease);
 	}
 
-	.chip:hover {
-		border-color: var(--accent);
-		color: var(--accent);
+	.filters button:hover {
+		color: var(--ink);
 	}
 
-	.chip.on {
-		background: var(--accent);
-		border-color: var(--accent);
-		color: #fff;
+	.filters button.on {
+		background: var(--raise);
+		color: var(--ink);
 	}
 
 	.count {
-		font-size: 0.72rem;
+		font-family: var(--font-mono);
+		font-size: 12px;
 		font-variant-numeric: tabular-nums;
 		color: var(--ink-mute);
-		background: var(--bg-alt);
-		border-radius: 999px;
-		padding: 0.1rem 0.45rem;
-		transition:
-			background 0.25s var(--ease),
-			color 0.25s var(--ease);
 	}
 
-	.chip.on .count {
-		background: rgba(255, 255, 255, 0.22);
-		color: #fff;
-	}
-
-	/* ---------- Grid ---------- */
+	/* ---------- Entries ---------- */
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
-		gap: 1.75rem;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 40px 24px;
 	}
 
-	.card {
+	.entry {
 		display: flex;
 		flex-direction: column;
+		gap: 16px;
 		text-decoration: none;
-		background: var(--bg-raise);
-		border: 1px solid var(--line);
-		border-radius: var(--radius);
-		overflow: hidden;
-		transition:
-			transform 0.3s var(--ease),
-			box-shadow 0.3s var(--ease),
-			border-color 0.3s var(--ease),
-			background-color 0.35s var(--ease);
 	}
 
-	.card:hover {
-		transform: translateY(-6px);
-		border-color: var(--accent);
-		box-shadow: 0 30px 60px -28px var(--shadow-color);
-	}
-
-	/* ---------- Screenshot with browser chrome ---------- */
-	.shot {
-		border-bottom: 1px solid var(--line);
-		background: var(--bg-alt);
-	}
-
-	.chrome {
-		display: flex;
+	.entry.lead {
+		grid-column: 1 / -1;
+		display: grid;
+		grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+		gap: 24px clamp(24px, 4vw, 56px);
 		align-items: center;
-		gap: 0.4rem;
-		padding: 0.6rem 0.85rem;
+		padding-bottom: 40px;
 		border-bottom: 1px solid var(--line);
-		background: var(--bg-alt);
 	}
 
-	.dot {
-		width: 8px;
-		height: 8px;
-		border-radius: 50%;
-		background: var(--line);
-		flex-shrink: 0;
-	}
-
-	.addr {
-		margin-inline-start: 0.5rem;
-		min-width: 0;
-		flex: 1;
-		font-size: 0.72rem;
-		color: var(--ink-mute);
-		background: var(--bg-raise);
-		border-radius: 999px;
-		padding: 0.16rem 0.7rem;
-		white-space: nowrap;
+	.shot {
+		border: 1px solid var(--line-strong);
+		border-radius: var(--r-card);
 		overflow: hidden;
-		text-overflow: ellipsis;
-		transition: background-color 0.35s var(--ease);
+		background: var(--raise);
+		transition: border-color 0.15s var(--ease);
+	}
+
+	.entry:hover .shot {
+		border-color: var(--accent);
 	}
 
 	.shot img {
@@ -236,67 +161,84 @@
 		aspect-ratio: 1440 / 900;
 		object-fit: cover;
 		object-position: top center;
-		transition: transform 0.55s var(--ease);
 	}
 
-	.card:hover .shot img {
-		transform: scale(1.035);
-	}
-
-	/* ---------- Body ---------- */
-	.body {
+	.meta {
 		display: flex;
-		flex-direction: column;
-		flex: 1;
-		padding: 1.5rem 1.6rem 1.7rem;
+		align-items: center;
+		gap: 12px;
+		margin-bottom: 8px;
 	}
 
-	.tags {
-		display: flex;
-		gap: 0.45rem;
-		margin-bottom: 0.9rem;
-		flex-wrap: wrap;
+	.meta .domain {
+		min-width: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
-	.tags span {
-		font-size: 0.72rem;
-		font-weight: 600;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
+	.meta svg {
+		margin-inline-start: auto;
+		flex-shrink: 0;
+		color: var(--ink-mute);
+		transition:
+			color 0.15s var(--ease),
+			transform 0.15s var(--ease);
+	}
+
+	.entry:hover .meta svg {
 		color: var(--accent);
-		background: var(--accent-soft);
-		border-radius: 999px;
-		padding: 0.28rem 0.75rem;
+		transform: translate(2px, -2px);
 	}
 
 	h3 {
-		font-weight: 600;
-		font-size: 1.3rem;
-		margin-bottom: 0.55rem;
+		font-size: 22px;
+		line-height: 28px;
+		margin-bottom: 8px;
+	}
+
+	.lead h3 {
+		font-size: clamp(26px, 2.6vw, 32px);
+		line-height: 1.2;
+		margin-bottom: 12px;
 	}
 
 	.body p {
+		color: var(--ink-soft);
+		font-size: 15px;
+		line-height: 24px;
+	}
+
+	.lead .body p:not(.tags) {
+		font-size: 17px;
+		line-height: 28px;
+	}
+
+	.body .tags {
+		margin-top: 12px;
+		font-size: 13px;
+		line-height: 20px;
 		color: var(--ink-mute);
-		font-size: 0.96rem;
-		line-height: 1.65;
 	}
 
-	.visit {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.4rem;
-		margin-top: auto;
-		padding-top: 1.15rem;
-		font-size: 0.88rem;
-		font-weight: 600;
-		color: var(--accent);
+	@media (max-width: 960px) {
+		.grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.entry.lead {
+			grid-template-columns: minmax(0, 1fr);
+		}
 	}
 
-	.visit svg {
-		transition: transform 0.25s var(--ease);
-	}
+	@media (max-width: 640px) {
+		.grid {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 32px;
+		}
 
-	.card:hover .visit svg {
-		transform: translate(2px, -2px);
+		.entry.lead {
+			padding-bottom: 32px;
+		}
 	}
 </style>

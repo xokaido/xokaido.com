@@ -7,96 +7,116 @@
 
 <footer>
 	<div class="wrap top">
-		<div class="col brand-col">
-			<img class="logo" src="/images/logo-full.png" alt="Xokaido Technologies LLC" width="230" height="138" loading="lazy" />
+		<div class="brand-col">
+			<a class="brand" href="#top" aria-label="Xokaido Technologies — home">
+				<img src="/images/logo-mark.png" alt="" width="36" height="28" loading="lazy" />
+				<span>Xokaido Technologies</span>
+			</a>
 			<p>{t.footer.tagline}</p>
 		</div>
-		<nav class="col" aria-label="Footer">
+
+		<nav aria-label="Footer">
 			<h3>{t.footer.linksTitle}</h3>
 			<a href="#services">{t.nav.services}</a>
 			<a href="#work">{t.nav.work}</a>
 			<a href="#founder">{t.nav.about}</a>
 			<a href="#process">{t.nav.process}</a>
 		</nav>
+
 		<div class="col">
 			<h3>{t.footer.contactTitle}</h3>
 			<a href="mailto:hello@xokaido.com">hello@xokaido.com</a>
 			<span>{t.footer.location}</span>
 		</div>
 	</div>
-	<div class="wrap bottom">
-		<span>© {year} Xokaido Technologies LLC. {t.footer.rights}</span>
-		<span>{t.footer.made}</span>
-	</div>
+
+	<div class="wrap bottom">© {year} Xokaido Technologies LLC · {t.footer.rights}</div>
 </footer>
 
 <style>
 	footer {
-		background: var(--dark);
-		color: var(--dark-mute);
-		font-size: 0.94rem;
-		border-top: 1px solid var(--dark-line);
+		border-top: 1px solid var(--line);
+		background: var(--raise);
 	}
 
 	.top {
 		display: grid;
-		grid-template-columns: 1.4fr 1fr 1fr;
-		gap: 2.5rem;
-		padding-block: 3.5rem 2.5rem;
+		grid-template-columns: minmax(0, 6fr) minmax(0, 3fr) minmax(0, 3fr);
+		gap: 40px 32px;
+		padding-block: 56px 40px;
 	}
 
-	.logo {
-		width: 200px;
+	.brand {
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+		text-decoration: none;
+		font-size: 17px;
+		font-weight: 600;
+		line-height: 1;
+	}
+
+	.brand img {
+		width: 36px;
 		height: auto;
-		margin-bottom: 1.25rem;
 	}
 
 	.brand-col p {
-		max-width: 26rem;
-		line-height: 1.7;
+		margin-top: 16px;
+		color: var(--ink-soft);
+		font-size: 15px;
+		line-height: 24px;
+		max-width: 360px;
 	}
 
+	nav,
 	.col {
 		display: flex;
 		flex-direction: column;
-		gap: 0.6rem;
 		align-items: flex-start;
+		gap: 8px;
+		font-size: 15px;
+		line-height: 24px;
 	}
 
-	.col h3 {
+	h3 {
 		font-family: var(--font-body);
-		font-size: 0.78rem;
-		font-weight: 600;
-		letter-spacing: 0.16em;
-		text-transform: uppercase;
-		color: var(--copper-bright);
-		margin-bottom: 0.5rem;
+		font-size: 14px;
+		line-height: 20px;
+		color: var(--ink-mute);
+		margin-bottom: 4px;
 	}
 
+	nav a,
 	.col a {
-		color: var(--dark-mute);
 		text-decoration: none;
-		transition: color 0.2s var(--ease);
+		transition: color 0.15s var(--ease);
 	}
 
+	nav a:hover,
 	.col a:hover {
-		color: var(--copper-bright);
+		color: var(--accent);
+	}
+
+	.col span {
+		color: var(--ink-soft);
 	}
 
 	.bottom {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem 2rem;
-		justify-content: space-between;
-		padding-block: 1.5rem;
-		border-top: 1px solid var(--dark-line);
-		font-size: 0.85rem;
+		border-top: 1px solid var(--line);
+		padding-block: 20px;
+		font-size: 13px;
+		line-height: 20px;
+		color: var(--ink-mute);
 	}
 
 	@media (max-width: 760px) {
 		.top {
-			grid-template-columns: 1fr;
-			gap: 2rem;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.brand-col {
+			grid-column: 1 / -1;
 		}
 	}
 </style>

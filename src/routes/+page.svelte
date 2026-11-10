@@ -6,7 +6,6 @@
 	import Work from '$lib/components/Work.svelte';
 	import Founder from '$lib/components/Founder.svelte';
 	import Process from '$lib/components/Process.svelte';
-	import Testimonials from '$lib/components/Testimonials.svelte';
 	import Contact from '$lib/components/Contact.svelte';
 
 	const meta = $derived(i18n.t.meta);
@@ -27,5 +26,4 @@
 <Work />
 <Founder />
 <Process />
-<Testimonials />
 <Contact />

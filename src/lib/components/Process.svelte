@@ -1,68 +1,158 @@
 <script lang="ts">
 	import { i18n } from '$lib/i18n.svelte';
-	import { reveal } from '$lib/actions';
 
 	const t = $derived(i18n.t.process);
 </script>
 
-<section id="process" class="process">
+<section id="process">
 	<div class="wrap">
-		<div class="section-head" use:reveal>
-			<p class="kicker">{t.kicker}</p>
-			<h2>{t.title}</h2>
-			<p>{t.sub}</p>
+		<div class="head">
+			<div>
+				<p class="label">{t.kicker}</p>
+				<h2>{t.title}</h2>
+			</div>
+			<p class="sub">{t.sub}</p>
 		</div>
-		<div class="grid">
-			{#each t.steps as step, idx (idx)}
-				<div class="step" use:reveal={idx * 90}>
-					<span class="num">0{idx + 1}</span>
+
+		<ol>
+			{#each t.steps as step, idx (step.title)}
+				<li>
+					<!-- How far along the job is at this step -->
+					<div class="progress" aria-hidden="true">
+						{#each t.steps as _, seg (seg)}
+							<i class:done={seg <= idx}></i>
+						{/each}
+					</div>
+					<span class="num">{idx + 1}</span>
 					<h3>{step.title}</h3>
 					<p>{step.desc}</p>
-				</div>
+				</li>
 			{/each}
-		</div>
+		</ol>
 	</div>
 </section>
 
 <style>
-	.process {
-		background: var(--bg-alt);
-		transition: background-color 0.35s var(--ease);
-	}
-
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-		gap: 1.5rem 1.25rem;
-	}
-
-	.step {
-		position: relative;
+	section {
 		border-top: 1px solid var(--line);
-		padding-top: 1.75rem;
+	}
+
+	.head {
+		display: grid;
+		grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+		gap: 16px clamp(40px, 7vw, 112px);
+		align-items: end;
+		margin-bottom: clamp(32px, 5vw, 56px);
+	}
+
+	h2 {
+		font-size: clamp(30px, 4vw, 48px);
+		line-height: 1.12;
+	}
+
+	.sub {
+		color: var(--ink-soft);
+		font-size: 18px;
+		line-height: 28px;
+	}
+
+	ol {
+		list-style: none;
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		background: var(--card);
+		border: 1px solid var(--line-strong);
+		border-radius: var(--r-panel);
+		overflow: hidden;
+	}
+
+	li {
+		padding: 28px 28px 36px;
+		border-inline-start: 1px solid var(--line);
+	}
+
+	li:first-child {
+		border-inline-start: none;
+	}
+
+	.progress {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 4px;
+		margin-bottom: 40px;
+	}
+
+	.progress i {
+		height: 3px;
+		border-radius: 2px;
+		background: var(--line-strong);
+	}
+
+	.progress i.done {
+		background: var(--accent);
 	}
 
 	.num {
+		display: block;
 		font-family: var(--font-display);
-		font-size: 1rem;
-		font-weight: 600;
-		color: var(--accent);
-		position: absolute;
-		top: -0.8rem;
-		left: 0;
-		background: var(--bg-alt);
-		padding-right: 0.8rem;
-		transition: background-color 0.35s var(--ease);
+		font-size: 64px;
+		line-height: 1;
+		font-variant-numeric: lining-nums;
+		color: var(--ink);
+		margin-bottom: 24px;
 	}
 
 	h3 {
-		font-weight: 600;
-		font-size: 1.24rem;
-		margin-bottom: 0.55rem;
+		font-size: 26px;
+		line-height: 32px;
+		margin-bottom: 12px;
 	}
 
-	p {
-		color: var(--ink-mute);
-		font-size: 0.95rem;
+	li p {
+		color: var(--ink-soft);
+		font-size: 16px;
+		line-height: 26px;
+	}
+
+	@media (max-width: 1040px) {
+		.head {
+			grid-template-columns: minmax(0, 1fr);
+		}
+
+		ol {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		li:nth-child(odd) {
+			border-inline-start: none;
+		}
+
+		li:nth-child(n + 3) {
+			border-top: 1px solid var(--line);
+		}
+	}
+
+	@media (max-width: 560px) {
+		ol {
+			grid-template-columns: minmax(0, 1fr);
+		}
+
+		li {
+			padding: 24px;
+			border-inline-start: none;
+		}
+
+		li + li {
+			border-top: 1px solid var(--line);
+		}
+
+		.progress {
+			margin-bottom: 24px;
+		}
+
+		.num {
+			font-size: 48px;
+			margin-bottom: 16px;
+		}
 	}
 </style>

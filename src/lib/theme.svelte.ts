@@ -2,7 +2,7 @@ import { browser } from '$app/environment';
 
 export type Theme = 'light' | 'dark';
 
-let current = $state<Theme>('light');
+let current = $state<Theme>('dark');
 
 function set(t: Theme) {
 	current = t;

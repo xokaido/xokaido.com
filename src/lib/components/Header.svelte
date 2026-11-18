@@ -39,19 +39,20 @@
 
 <header class:scrolled>
 	<div class="wrap inner">
-		<a class="brand" href="#top" onclick={close} aria-label="Xokaido Technologies — home">
+		<a class="brand" href="/#top" onclick={close} aria-label="Xokaido Technologies — home">
 			<img src="/images/logo-mark.png" alt="" width="36" height="28" />
 			<span>Xokaido</span>
 		</a>
 
 		<nav id="primary-nav" class="primary" class:open aria-label="Primary">
-			<a href="#services" onclick={close}>{nav.services}</a>
-			<a href="#work" onclick={close}>{nav.work}</a>
-			<a href="#founder" onclick={close}>{nav.about}</a>
-			<a href="#process" onclick={close}>{nav.process}</a>
+			<a href="/#services" onclick={close}>{nav.services}</a>
+			<a href="/#work" onclick={close}>{nav.work}</a>
+			<a href="/#founder" onclick={close}>{nav.about}</a>
+			<a href="/#process" onclick={close}>{nav.process}</a>
+			<a href="/google-workspace" onclick={close}>{nav.workspace}</a>
 			<div class="mobile-only">
 				{@render langSwitch()}
-				<a class="btn btn-primary" href="#contact" onclick={close}>{nav.contact}</a>
+				<a class="btn btn-primary" href="/#contact" onclick={close}>{nav.contact}</a>
 			</div>
 		</nav>
 
@@ -75,7 +76,7 @@
 				{/if}
 			</button>
 
-			<a class="btn btn-primary btn-sm desktop-only" href="#contact">{nav.contact}</a>
+			<a class="btn btn-primary btn-sm desktop-only" href="/#contact">{nav.contact}</a>
 
 			<button
 				class="icon-btn menu-btn"

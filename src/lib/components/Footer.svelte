@@ -8,7 +8,7 @@
 <footer>
 	<div class="wrap top">
 		<div class="brand-col">
-			<a class="brand" href="#top" aria-label="Xokaido Technologies — home">
+			<a class="brand" href="/#top" aria-label="Xokaido Technologies — home">
 				<img src="/images/logo-mark.png" alt="" width="36" height="28" loading="lazy" />
 				<span>Xokaido Technologies</span>
 			</a>
@@ -17,10 +17,11 @@
 
 		<nav aria-label="Footer">
 			<h3>{t.footer.linksTitle}</h3>
-			<a href="#services">{t.nav.services}</a>
-			<a href="#work">{t.nav.work}</a>
-			<a href="#founder">{t.nav.about}</a>
-			<a href="#process">{t.nav.process}</a>
+			<a href="/#services">{t.nav.services}</a>
+			<a href="/#work">{t.nav.work}</a>
+			<a href="/#founder">{t.nav.about}</a>
+			<a href="/#process">{t.nav.process}</a>
+			<a href="/google-workspace">{t.nav.workspace}</a>
 		</nav>
 
 		<div class="col">

@@ -11,7 +11,8 @@ const en = {
 		work: 'Work',
 		about: 'About',
 		process: 'Process',
-		contact: 'Start a project'
+		contact: 'Start a project',
+		workspace: 'Google Workspace'
 	},
 	hero: {
 		place: 'Software studio · Tbilisi, Georgia',
@@ -181,6 +182,47 @@ const en = {
 		entry: 'Your product',
 		entryNote: 'the next entry in the register'
 	},
+	workspace: {
+		meta: {
+			title: 'Google Workspace for your team — Xokaido Technologies',
+			description:
+				'Business email, Drive, Calendar and Meet on your own domain. Xokaido Technologies sets up and looks after Google Workspace: Starter $8.40, Standard $16.80, Plus $26.40 per user per month.'
+		},
+		kicker: 'Google Workspace',
+		title: 'Business email, Drive and Meet on your own domain',
+		sub: 'We set up Google Workspace for your team and look after it: email on your domain, shared Drive, Calendar and Meet. We handle the domain records, the move from your old mail and the accounts; you pay per user per month.',
+		perUser: 'per user / month',
+		choose: 'Order this plan',
+		features: [
+			['Email on your own domain', '30 GB storage per user', 'Meet calls with up to 100 people'],
+			['Everything in Starter', '2 TB storage per user', 'Meet calls with up to 150 people, with recording'],
+			['Everything in Standard', '5 TB storage per user', 'Meet calls with up to 500 people', 'Vault for retention and audit']
+		],
+		note: 'Prices are per user per month. Every plan includes Gmail, Drive, Docs, Sheets, Slides, Calendar, Meet and Chat.',
+		learnMore: 'About Google Workspace',
+		includedTitle: 'What we do for you',
+		included: [
+			{
+				title: 'Setup',
+				desc: 'We verify your domain and add the MX, SPF, DKIM and DMARC records, so your mail arrives and stays out of spam.'
+			},
+			{ title: 'Migration', desc: 'We move your existing mail, contacts and calendars over from your old provider.' },
+			{
+				title: 'Support',
+				desc: 'New users, password resets, shared mailboxes and groups: write to us and we sort it out.'
+			}
+		],
+		cloud: {
+			kicker: 'Google Cloud',
+			title: 'We build on Google Cloud too',
+			desc: 'Several of our products run on Google Cloud services. If your project needs hosting, databases, file storage or AI models on Google’s infrastructure, we can design it and run it for you.'
+		},
+		cta: {
+			title: 'How many people need an account?',
+			sub: 'Send us your team size and domain, and we will reply within one business day.',
+			button: 'Write to us'
+		}
+	},
 	footer: {
 		tagline: 'Websites, mobile apps and AI integrations, made in Tbilisi',
 		linksTitle: 'Navigate',
@@ -203,7 +245,8 @@ const ka: Dictionary = {
 		work: 'ნამუშევრები',
 		about: 'ჩვენ შესახებ',
 		process: 'პროცესი',
-		contact: 'დაიწყეთ პროექტი'
+		contact: 'დაიწყეთ პროექტი',
+		workspace: 'Google Workspace'
 	},
 	hero: {
 		place: 'პროგრამული სტუდია · თბილისი',
@@ -373,6 +416,47 @@ const ka: Dictionary = {
 		entry: 'თქვენი პროდუქტი',
 		entryNote: 'რეესტრის შემდეგი ჩანაწერი'
 	},
+	workspace: {
+		meta: {
+			title: 'Google Workspace თქვენი გუნდისთვის — Xokaido Technologies',
+			description:
+				'კორპორატიული ელფოსტა, Drive, Calendar და Meet თქვენს დომენზე. Xokaido Technologies Google Workspace-ს გიწყობთ და უვლის: Starter $8.40, Standard $16.80, Plus $26.40 თითო მომხმარებელზე თვეში.'
+		},
+		kicker: 'Google Workspace',
+		title: 'კორპორატიული ელფოსტა, Drive და Meet თქვენს დომენზე',
+		sub: 'Google Workspace-ს თქვენი გუნდისთვის ვაწყობთ და შემდეგაც ვუვლით: ელფოსტა თქვენს დომენზე, საერთო Drive, Calendar და Meet. დომენის ჩანაწერებს, ძველი ფოსტის გადმოტანასა და ანგარიშებს ჩვენ ვაკეთებთ, თქვენ კი ყოველთვიურად თითო მომხმარებელზე იხდით.',
+		perUser: 'მომხმარებელზე / თვეში',
+		choose: 'ამ პაკეტის შეკვეთა',
+		features: [
+			['ელფოსტა თქვენს დომენზე', '30 GB საცავი თითო მომხმარებელზე', 'Meet-ის ზარი 100 მონაწილემდე'],
+			['ყველაფერი, რაც Starter-შია', '2 TB საცავი თითო მომხმარებელზე', 'Meet-ის ზარი 150 მონაწილემდე, ჩაწერით'],
+			['ყველაფერი, რაც Standard-შია', '5 TB საცავი თითო მომხმარებელზე', 'Meet-ის ზარი 500 მონაწილემდე', 'Vault: მონაცემების შენახვა და აუდიტი']
+		],
+		note: 'ფასი მითითებულია თითო მომხმარებელზე თვეში. ყველა პაკეტში შედის Gmail, Drive, Docs, Sheets, Slides, Calendar, Meet და Chat.',
+		learnMore: 'Google Workspace-ის შესახებ',
+		includedTitle: 'რას ვაკეთებთ ჩვენ',
+		included: [
+			{
+				title: 'გამართვა',
+				desc: 'დომენს ვადასტურებთ და MX, SPF, DKIM და DMARC ჩანაწერებს ვამატებთ, რომ წერილები ადრესატამდე მივიდეს და სპამში არ მოხვდეს.'
+			},
+			{ title: 'გადმოტანა', desc: 'ძველი პროვაიდერიდან ფოსტას, კონტაქტებსა და კალენდრებს გადმოვიტანთ.' },
+			{
+				title: 'მხარდაჭერა',
+				desc: 'ახალი მომხმარებლის დამატება, პაროლის აღდგენა, საერთო საფოსტო ყუთები და ჯგუფები: მოგვწერეთ და მოვაგვარებთ.'
+			}
+		],
+		cloud: {
+			kicker: 'Google Cloud',
+			title: 'Google Cloud-ზეც ვმუშაობთ',
+			desc: 'ჩვენი რამდენიმე პროდუქტი Google Cloud-ის სერვისებს იყენებს. თუ პროექტს Google-ის ინფრასტრუქტურაზე ჰოსტინგი, მონაცემთა ბაზა, ფაილების საცავი ან AI-მოდელები სჭირდება, დავაპროექტებთ და მოვუვლით.'
+		},
+		cta: {
+			title: 'რამდენ თანამშრომელს სჭირდება ანგარიში?',
+			sub: 'მოგვწერეთ გუნდის ზომა და დომენი. ერთ სამუშაო დღეში გიპასუხებთ.',
+			button: 'მოგვწერეთ'
+		}
+	},
 	footer: {
 		tagline: 'ვებსაიტები, მობილური აპები და AI-ინტეგრაციები — თბილისიდან',
 		linksTitle: 'ნავიგაცია',
@@ -393,7 +477,8 @@ const ru: Dictionary = {
 		work: 'Проекты',
 		about: 'О нас',
 		process: 'Процесс',
-		contact: 'Начать проект'
+		contact: 'Начать проект',
+		workspace: 'Google Workspace'
 	},
 	hero: {
 		place: 'Студия разработки · Тбилиси',
@@ -562,6 +647,47 @@ const ru: Dictionary = {
 		mailLabel: 'Или на почту',
 		entry: 'Ваш продукт',
 		entryNote: 'следующая запись в реестре'
+	},
+	workspace: {
+		meta: {
+			title: 'Google Workspace для вашей команды — Xokaido Technologies',
+			description:
+				'Корпоративная почта, Drive, Calendar и Meet на вашем домене. Xokaido Technologies подключает и сопровождает Google Workspace: Starter $8.40, Standard $16.80, Plus $26.40 за пользователя в месяц.'
+		},
+		kicker: 'Google Workspace',
+		title: 'Корпоративная почта, Drive и Meet на вашем домене',
+		sub: 'Подключаем Google Workspace для вашей команды и сопровождаем его: почта на вашем домене, общий Drive, Calendar и Meet. Записи домена, перенос старой почты и учётные записи берём на себя, а вы платите помесячно за каждого пользователя.',
+		perUser: 'за пользователя / месяц',
+		choose: 'Заказать этот тариф',
+		features: [
+			['Почта на вашем домене', '30 ГБ хранилища на пользователя', 'Звонки в Meet до 100 участников'],
+			['Всё, что есть в Starter', '2 ТБ хранилища на пользователя', 'Звонки в Meet до 150 участников, с записью'],
+			['Всё, что есть в Standard', '5 ТБ хранилища на пользователя', 'Звонки в Meet до 500 участников', 'Vault: хранение данных и аудит']
+		],
+		note: 'Цена указана за одного пользователя в месяц. Во все тарифы входят Gmail, Drive, Docs, Sheets, Slides, Calendar, Meet и Chat.',
+		learnMore: 'О Google Workspace',
+		includedTitle: 'Что мы делаем за вас',
+		included: [
+			{
+				title: 'Настройка',
+				desc: 'Подтверждаем домен и прописываем записи MX, SPF, DKIM и DMARC, чтобы письма доходили и не попадали в спам.'
+			},
+			{ title: 'Перенос', desc: 'Переносим почту, контакты и календари от прежнего провайдера.' },
+			{
+				title: 'Поддержка',
+				desc: 'Новые пользователи, сброс паролей, общие ящики и группы: напишите нам, и мы всё сделаем.'
+			}
+		],
+		cloud: {
+			kicker: 'Google Cloud',
+			title: 'Работаем и с Google Cloud',
+			desc: 'Несколько наших продуктов работают на сервисах Google Cloud. Если вашему проекту нужен хостинг, базы данных, хранилище файлов или AI-модели на инфраструктуре Google, спроектируем и будем сопровождать.'
+		},
+		cta: {
+			title: 'Скольким сотрудникам нужен аккаунт?',
+			sub: 'Напишите размер команды и домен — ответим в течение одного рабочего дня.',
+			button: 'Написать нам'
+		}
 	},
 	footer: {
 		tagline: 'Сайты, мобильные приложения и AI-интеграции — из Тбилиси',

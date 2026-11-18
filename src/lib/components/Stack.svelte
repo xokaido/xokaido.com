@@ -2,7 +2,7 @@
 	import { i18n } from '$lib/i18n.svelte';
 
 	const label = $derived(i18n.t.stack.label);
-	const tech = ['SvelteKit', 'React', 'Node.js', 'TypeScript', 'Swift', 'Kotlin', 'PostgreSQL', 'AWS', 'Claude API'];
+	const tech = ['SvelteKit', 'React', 'Node.js', 'TypeScript', 'Swift', 'Kotlin', 'PostgreSQL', 'AWS', 'Google Cloud', 'Claude API'];
 </script>
 
 <div class="stack">
